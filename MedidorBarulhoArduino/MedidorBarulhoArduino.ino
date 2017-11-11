@@ -98,10 +98,10 @@ void mesuringAmbientSound() {
 
   if (sSensorActualValue < VALOR_MIN_ARDUINO)
       sSensorActualValue = VALOR_MIN_ANDROID;
-  else if (sSensorActualValue >= VALOR_MIN_ARDUINO && sSensorActualValue <= VALOR_MAX_ARDUINO)
+  else if (sSensorActualValue >= VALOR_MIN_ARDUINO) // && sSensorActualValue <= VALOR_MAX_ARDUINO)
       sSensorActualValue = sSensorActualValue - VALOR_MIN_ARDUINO;
-  else
-      sSensorActualValue = VALOR_MAX_ANDROID;
+  //else
+    //  sSensorActualValue = VALOR_MAX_ANDROID;
   
   verificaLimite();
   delay(2000); //verificar o som a cada 5 segundos
